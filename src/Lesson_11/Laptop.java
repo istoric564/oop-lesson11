@@ -2,8 +2,9 @@ package Lesson_11;
 
 /**
  * Laptop <- Computer <- Object
+ * final - запрет наследования.
  */
-public class Laptop extends Computer {
+public final class Laptop extends Computer {
 
     private int weight;
 //    Блоки инициализации
@@ -23,6 +24,12 @@ public class Laptop extends Computer {
     public Laptop() {
         System.out.println("Constructor laptop ");
     }
+
+    @Override
+    public void load() {
+
+    }
+
     public void open(){
         System.out.println("Открыл крышку.");
     }
