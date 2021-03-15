@@ -1,6 +1,6 @@
 package Lesson_11;
 
-public abstract class Computer {
+public abstract class Computer implements Printable{
     private Ssd ssd;
     private Ram ram;
 
@@ -21,6 +21,7 @@ public abstract class Computer {
 
     public abstract void load();
 
+    @Override
     public void print(){
         System.out.println("Ssd: " + ssd.getValue() + "Ram: " + ram.getValue());
     }
